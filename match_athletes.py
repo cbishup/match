@@ -52,7 +52,7 @@ def main():
                         #tmp_file.write("%s \n" % x)
                        #newList = []
 				newList.append(data[line-1])
-				with open("%s" % (highschool + " 2016"), "w") as fp:
+				with open("%s" % (highschool + " 2016.csv"), "w") as fp:
 					a = csv.writer(fp, delimiter=',')
 					a.writerows(newList)
 				newList = []
