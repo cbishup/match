@@ -1,8 +1,38 @@
 import csv
+<<<<<<< HEAD
 import os
 import shutil
 
 
+=======
+
+
+def read_file(file):
+    lines = open(file)
+    newList = []
+    for line in lines:
+        newerList = []
+        temp1 = [x for x in line.split('\r')]
+        for linex in temp1:
+            temp = [y for y in line.split(",")]
+            newerList.append(temp)
+        newList.append(newerList)
+    return newList
+
+def pull_highschool(sorted_file, index):
+    for line in range(index,len(sorted_file)):
+        newList = []
+        highschool = sorted_file[line][9]
+        tmp_highschool = ''
+        for tmp_line in range(line,len(sorted_file)):
+            tmp_highschool = sorted_file[tmp_line][9]
+            if tmp_highschool == highschool:
+                newList.append(sorted_file[tmp_line])
+            else:
+                print newList
+
+#def check_highschool(mid,end,spvar):
+>>>>>>> origin/master
 
 
 
@@ -27,6 +57,7 @@ def main():
                         #tmp_file.write("%s \n" % x)
                        #newList = []
 				newList.append(data[line-1])
+<<<<<<< HEAD
 				newpath = "/Users/mattsewall/Desktop/Big/%s" % highschool
 				if not os.path.exists(newpath):
 					os.makedirs(newpath)
@@ -37,6 +68,11 @@ def main():
 				filename = "%s" % (highschool + " Coach.csv")
 				oldpath = "/Users/mattsewall/Desktop/coaches/%s_Coach.csv" % highschool
 				shutil.move(filename, newnewpath)
+=======
+				with open("%s" % (highschool + " 2016.csv"), "w") as fp:
+					a = csv.writer(fp, delimiter=',')
+					a.writerows(newList)
+>>>>>>> origin/master
 				newList = []
 				highschool = data[line][4]
 				line+=1
