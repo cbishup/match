@@ -1,4 +1,8 @@
 import csv
+<<<<<<< HEAD
+import os
+=======
+>>>>>>> origin/master
 
 
 def read_file(file):
@@ -53,5 +57,10 @@ def main():
 
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/master
 if __name__ == '__main__':
     main()
